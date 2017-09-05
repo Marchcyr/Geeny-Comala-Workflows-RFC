@@ -25,9 +25,9 @@
         {task:name=Document Outcome|assignee=@pageauthor@}
         {task:name=Communicate Outcome (blog, slack etc.)I|assignee=@pageauthor@}
     {state}
-    
+ 
     {state:Expired|approved=Approved|rejected=Draft|taskable=true}
-        {approval:Draft Pre-Approval|user=@Contributor@}
-     
+        {approval:Confirm Document is Still valid|user=@Contributor@,@Approver@}
+    
     {state}
 {workflow}
