@@ -1,22 +1,33 @@
 {workflow:adhoc=true}
     {state:Draft|taskable=true}
+        {approval:Draft Pre-Approval|user=@Contributor@}
         {task:name=List Stakeholders DACI|assignee=@pageauthor@}
         {task:name=Set Due Date for Comment|assignee=@pageauthor@}
     {state}
+    
+   
+    #Need the ability to re-set contributor
     {state:In Review|approved=Approved|rejected=In Review|taskable=true}
+        {approval:Formal Review Approval|user=@Contributor@,@Approver@}
         {task:name=Create Checklist of what happens on Approval|assignee=@pageauthor@}
         {task:name=Edit/Comment Document|assignee=@editor@}
     {state}
+    
     {state:Approved|taskable=true}
         {task:name=Document Outcome|assignee=@pageauthor@}
         {task:name=Communicate Outcome (blog, slack etc.)I|assignee=@pageauthor@}
         {task:name=Execute Checklist of What happens on approval|assignee=@pageauthor@}
         {task:name=Review & Update Technical Documents|assignee=@pageauthor@}
     {state}
+    
+    
     {state:Rejected|taskable=true}
         {task:name=Document Outcome|assignee=@pageauthor@}
         {task:name=Communicate Outcome (blog, slack etc.)I|assignee=@pageauthor@}
     {state}
-    {state:Expired|taskable=true}
+    
+    {state:Expired|approved=Approved|rejected=Draft|taskable=true}
+        {approval:Draft Pre-Approval|user=@Contributor@}
+     
     {state}
 {workflow}
