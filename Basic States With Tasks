@@ -3,6 +3,11 @@
         {approval:Draft Pre-Approval|user=@Contributor@,@Author@}
         {task:name=List Stakeholders DACI|assignee=@pageauthor@}
         {task:name=Set Due Date for Comment|assignee=@pageauthor@}
+        {trigger|pageassigned|state=Assign Author}
+            {set-metadata:pageauthor}@assignee@{set-metadata}
+            (set-state:Planning}
+        {trigger}
+            
     {state}
     
    
