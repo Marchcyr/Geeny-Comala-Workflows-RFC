@@ -20,8 +20,9 @@
         {task:name=Review & Update Technical Documents|assignee=@pageauthor@}
     {state}
     
-    
+  
     {state:Rejected|taskable=true}
+        {approval:Reconsider Document for Approval|user=@Contributor@,@Approver@}
         {task:name=Document Outcome|assignee=@pageauthor@}
         {task:name=Communicate Outcome (blog, slack etc.)I|assignee=@pageauthor@}
     {state}
