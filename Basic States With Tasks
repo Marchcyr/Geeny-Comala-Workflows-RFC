@@ -1,6 +1,6 @@
 {workflow:adhoc=true}
     {state:Draft|taskable=true}
-        {approval:Draft Pre-Approval|user=@Contributor@}
+        {approval:Draft Pre-Approval|user=@Contributor@,@Author@}
         {task:name=List Stakeholders DACI|assignee=@pageauthor@}
         {task:name=Set Due Date for Comment|assignee=@pageauthor@}
     {state}
